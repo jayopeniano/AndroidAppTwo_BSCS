@@ -1,0 +1,99 @@
+package com.example.myapplication;
+
+import android.content.DialogInterface;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
+import android.view.View.OnClickListener;
+import android.view.View;
+import android.app.Activity;
+        import android.content.Context;
+        import android.view.Menu;
+        import android.view.View;
+        import android.view.View.OnClickListener;
+        import android.widget.Button;
+        import android.widget.CheckBox;
+        import android.widget.EditText;
+        import android.widget.RadioButton;
+        import android.widget.RatingBar;
+        import android.widget.RatingBar.OnRatingBarChangeListener;
+        import android.widget.ToggleButton;
+        import android.view.ContextMenu;
+
+
+
+public class MainActivity extends AppCompatActivity {
+    Button btn_txt, btn_txt_image, btn_toast;
+    ImageButton  btn_image;
+    CheckBox cbx_fruit, cbx_meat;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        btn_txt = (Button) findViewById(R.id.btn_txt);
+        btn_txt_image = (Button) findViewById(R.id.btn_txt_image);
+        btn_toast = (Button) findViewById(R.id.btn_toast);
+        btn_image = (ImageButton) findViewById(R.id.btn_image);
+
+        btn_txt.setOnClickListener(new View.OnClickListener(){
+           @Override
+            public void onClick(View view){
+               Context context = getApplicationContext();
+               CharSequence text = "You Clicked Text Button";
+               int duration = Toast.LENGTH_SHORT;
+               Toast toast = Toast.makeText(context, text, duration);
+               toast.show();
+           }
+        });
+        btn_txt_image.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Context context = getApplicationContext();
+                CharSequence text = "You Clicked Text Button";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            }
+        });
+
+        btn_txt_image.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Context context = getApplicationContext();
+                CharSequence text = "You Clicked Text Image Button";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            }
+        });
+
+        btn_image.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Context context = getApplicationContext();
+                CharSequence text = "You Clicked Image Button";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            }
+        });
+        btn_toast.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Context context = getApplicationContext();
+                CharSequence text = "You Clicked Toast Button";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+            }
+        });
+
+
+
+    }
+}
